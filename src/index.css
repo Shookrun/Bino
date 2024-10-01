@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Syne;
+    src: url(../fonts/Syne.ttf);
+}
+
+*{
+    font-family: Syne;
+}
 body{
     background-color: #FDFBF5;
+}
+
+
+.navBtn{
+    position: relative;
+}
+
+.navBtn::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    transition: all .8s;
+    background-color: black;
+    bottom: 0;
+    width: 0;
+}
+
+.navBtn:hover::before{
+    width: 100%;
 }
